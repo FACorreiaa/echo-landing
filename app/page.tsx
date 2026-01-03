@@ -1,5 +1,5 @@
 import { Navbar } from "@/components/Navbar";
-import { Hero } from "@/components/Hero";
+import { SplashHero } from "@/components/SplashHero";
 import { Features } from "@/components/Features";
 import { DetailedFeatures } from "@/components/DetailedFeatures";
 import { Platforms } from "@/components/Platforms";
@@ -11,7 +11,7 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <Navbar />
       <main>
-        <Hero />
+        <SplashHero />
         <Features />
         <DetailedFeatures />
         <Platforms />
