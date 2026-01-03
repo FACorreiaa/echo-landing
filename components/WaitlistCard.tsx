@@ -4,6 +4,8 @@ import { useState } from "react";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { Mail, CheckCircle, Loader2 } from "lucide-react";
 
+import { FadeIn } from "@/components/ui/fade-in";
+
 export function WaitlistCard() {
     const [email, setEmail] = useState("");
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -24,7 +26,7 @@ export function WaitlistCard() {
 
     return (
         <section id="waitlist" className="py-24 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-xl mx-auto text-center">
+            <FadeIn className="max-w-xl mx-auto text-center">
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
                     Be the First to Know
                 </h2>
@@ -84,7 +86,7 @@ export function WaitlistCard() {
                         )}
                     </div>
                 </div>
-            </div>
+            </FadeIn>
         </section>
     );
 }
