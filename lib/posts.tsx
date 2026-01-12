@@ -10,6 +10,55 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
     {
+        slug: "v0-1-1-release-notes",
+        title: "Echo v0.1.1 Update: Planning Your Future",
+        date: "January 9, 2026",
+        summary: "Create and manage financial plans with manual entry support.",
+        content: (
+            <div className="space-y-6 text-zinc-300">
+                <p className="text-lg leading-relaxed">
+                    We're excited to announce Echo v0.1.1, bringing powerful planning capabilities to help you take control of your financial future.
+                </p>
+
+                <div className="my-8 p-6 glass rounded-2xl border border-white/5">
+                    <h3 className="text-xl font-semibold text-white mb-2">🎯 What's New in v0.1.1</h3>
+                    <ul className="space-y-2">
+                        <li className="flex items-start gap-2">
+                            <span className="text-emerald-400 mt-1">•</span>
+                            <span>Create comprehensive financial plans</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                            <span className="text-emerald-400 mt-1">•</span>
+                            <span>Manual creation and editing of financial plans</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                            <span className="text-emerald-400 mt-1">•</span>
+                            <span>Define budgets and track financial goals</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <h2 className="text-2xl font-bold text-white mt-8 mb-4">Financial Planning Engine</h2>
+                <p className="leading-relaxed">
+                    Building on v0.1's import foundation, we've introduced a dedicated planning engine. Now you can create financial plans from scratch, setting up budgets and defining your financial goals within Echo.
+                </p>
+
+                <h2 className="text-2xl font-bold text-white mt-8 mb-4">Manual Plan Creation</h2>
+                <p className="leading-relaxed">
+                    Whether you're starting fresh or want to customize every detail, Echo v0.1.1 lets you manually create and edit financial plans. Define income sources, expense categories, savings goals, and more—all within an intuitive interface.
+                </p>
+                <p className="leading-relaxed mt-4">
+                    This gives you complete control over your financial roadmap while Echo intelligently tracks your progress against your plans.
+                </p>
+
+                <h2 className="text-2xl font-bold text-white mt-8 mb-4">Looking Ahead</h2>
+                <p className="leading-relaxed">
+                    With planning and import capabilities in place, we're laying the groundwork for intelligent forecasting and scenario modeling. Echo is evolving from a tracker into a true financial planning companion.
+                </p>
+            </div>
+        ),
+    },
+    {
         slug: "v0-1-release-notes",
         title: "Echo v0.1 Update: The Foundation",
         date: "January 4, 2026",
