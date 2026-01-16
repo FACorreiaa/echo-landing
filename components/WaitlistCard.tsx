@@ -2,13 +2,14 @@
 
 import { useState } from "react";
 import { BorderBeam } from "@/components/ui/border-beam";
-import { Mail, CheckCircle, Loader2 } from "lucide-react";
-
+import { Mail, CheckCircle, Loader2, AlertCircle } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
+import { joinWaitlist, type WaitlistResult } from "@/app/actions/waitlist";
 
 export function WaitlistCard() {
     const [email, setEmail] = useState("");
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+    const [result, setResult] = useState<WaitlistResult | null>(null);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -16,12 +17,14 @@ export function WaitlistCard() {
 
         setStatus("loading");
 
-        // Simulate API call - replace with actual email service integration
-        await new Promise((resolve) => setTimeout(resolve, 1500));
-
-        // For now, just show success
-        setStatus("success");
-        setEmail("");
+        const response = await joinWaitlist(email);
+        
+        setResult(response);
+        setStatus(response.success ? "success" : "error");
+        
+        if (response.success) {
+            setEmail("");
+        }
     };
 
     return (
@@ -38,18 +41,43 @@ export function WaitlistCard() {
                     <div className="glass-card p-8 relative overflow-hidden">
                         <BorderBeam size={200} duration={12} delay={0} />
 
-                        {status === "success" ? (
+                        {status === "success" && result ? (
                             <div className="flex flex-col items-center gap-4 py-4">
                                 <div className="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center">
                                     <CheckCircle className="w-8 h-8 text-green-400" />
                                 </div>
-                                <div>
+                                <div className="text-center">
                                     <h3 className="text-xl font-semibold text-white mb-1">
                                         You&apos;re on the list!
                                     </h3>
+                                    {result.position && result.position > 0 && (
+                                        <p className="text-2xl font-bold text-[oklch(0.65_0.18_220)] mb-2">
+                                            #{result.position}
+                                        </p>
+                                    )}
                                     <p className="text-zinc-400 text-sm">
-                                        We&apos;ll notify you when Echo is ready.
+                                        {result.message || "We'll notify you when Echo is ready."}
                                     </p>
+                                </div>
+                            </div>
+                        ) : status === "error" && result ? (
+                            <div className="flex flex-col items-center gap-4 py-4">
+                                <div className="w-16 h-16 rounded-full bg-red-500/20 flex items-center justify-center">
+                                    <AlertCircle className="w-8 h-8 text-red-400" />
+                                </div>
+                                <div className="text-center">
+                                    <h3 className="text-xl font-semibold text-white mb-1">
+                                        Something went wrong
+                                    </h3>
+                                    <p className="text-zinc-400 text-sm mb-4">
+                                        {result.error || "Please try again."}
+                                    </p>
+                                    <button
+                                        onClick={() => setStatus("idle")}
+                                        className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors"
+                                    >
+                                        Try Again
+                                    </button>
                                 </div>
                             </div>
                         ) : (
