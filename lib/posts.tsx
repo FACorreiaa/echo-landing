@@ -10,6 +10,70 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
     {
+        slug: "v0-2-release-notes",
+        title: "Echo v0.2: Custom Plans & Refinements",
+        date: "January 17, 2026",
+        summary: "Enhanced plan creation, template gallery, and UI polish across the app.",
+        content: (
+            <div className="space-y-6 text-zinc-300">
+                <p className="text-lg leading-relaxed">
+                    Echo v0.2 is here with a focus on making plan creation faster, more flexible, and more intuitive. We&apos;ve also squashed bugs and refined the user experience throughout.
+                </p>
+
+                <div className="my-8 p-6 glass rounded-2xl border border-white/5">
+                    <h3 className="text-xl font-semibold text-white mb-2">✨ What&apos;s New in v0.2</h3>
+                    <ul className="space-y-2">
+                        <li className="flex items-start gap-2">
+                            <span className="text-emerald-400 mt-1">•</span>
+                            <span>Enhanced custom plan creation flow</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                            <span className="text-emerald-400 mt-1">•</span>
+                            <span>New template gallery (50/30/20, Pay Yourself First, and more)</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                            <span className="text-emerald-400 mt-1">•</span>
+                            <span>Improved category group builder with drag-and-drop</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                            <span className="text-emerald-400 mt-1">•</span>
+                            <span>ML confidence threshold for smarter Excel imports</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                            <span className="text-emerald-400 mt-1">•</span>
+                            <span>Various UI bug fixes and visual refinements</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <h2 className="text-2xl font-bold text-white mt-8 mb-4">Custom Plan Creation</h2>
+                <p className="leading-relaxed">
+                    Building your financial plan from scratch is now more intuitive than ever. The new plan builder lets you define category groups, set percentage allocations, and add items with just a few taps. Whether you prefer a 50/30/20 split or want complete control, Echo adapts to your style.
+                </p>
+
+                <h2 className="text-2xl font-bold text-white mt-8 mb-4">Template Gallery</h2>
+                <p className="leading-relaxed">
+                    Don&apos;t want to start from scratch? Browse our curated template gallery featuring popular budgeting frameworks. Select a template, customize it to your needs, and start tracking immediately.
+                </p>
+
+                <h2 className="text-2xl font-bold text-white mt-8 mb-4">Smarter Excel Imports</h2>
+                <p className="leading-relaxed">
+                    We&apos;ve added confidence thresholds to our ML-powered import engine. Items the system is confident about are auto-approved, while low-confidence items are flagged for your review. Corrections you make teach the system, making future imports even smarter.
+                </p>
+
+                <h2 className="text-2xl font-bold text-white mt-8 mb-4">UI Refinements</h2>
+                <p className="leading-relaxed">
+                    We&apos;ve addressed numerous visual quirks and interaction bugs reported by early testers. Navigation feels smoother, forms are more responsive, and the glassmorphism theme is more consistent throughout the app.
+                </p>
+
+                <h2 className="text-2xl font-bold text-white mt-8 mb-4">Coming in v0.3</h2>
+                <p className="leading-relaxed">
+                    Next up: goal tracking with progress visualization, intelligent alerts, and the first iteration of our forecasting engine. Echo is becoming more alive with every release.
+                </p>
+            </div>
+        ),
+    },
+    {
         slug: "v0-1-1-release-notes",
         title: "Echo v0.1.1 Update: Planning Your Future",
         date: "January 9, 2026",

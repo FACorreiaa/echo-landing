@@ -7,7 +7,7 @@
 
 import { query, queryOne } from "@/lib/db";
 import { resend, FROM_EMAIL } from "@/lib/resend";
-import EarlyAccessInvite from "@/emails/EarlyAccessInvite";
+import SovereigntyGranted from "@/emails/SovereigntyGranted";
 import crypto from "crypto";
 
 const ADMIN_SECRET = process.env.ADMIN_SECRET || "";
@@ -181,8 +181,8 @@ export async function sendInvite(waitlistId: string): Promise<SendInviteResult> 
       await resend.emails.send({
         from: FROM_EMAIL,
         to: entry.email,
-        subject: "Your Echo Invitation Has Arrived 🚀",
-        react: EarlyAccessInvite({ inviteCode }),
+        subject: "[ECHO] Sovereignty Granted. Your invitation inside.",
+        react: SovereigntyGranted({ inviteCode }),
       });
     }
 

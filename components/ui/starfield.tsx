@@ -30,8 +30,8 @@ interface StarfieldProps {
 
 export function Starfield({
     className,
-    starCount = 200,
-    shootingStarFrequency = 0.002,
+    starCount = 80, // Reduced from 200 for mobile performance
+    shootingStarFrequency = 0.001, // Reduced frequency
 }: StarfieldProps) {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
