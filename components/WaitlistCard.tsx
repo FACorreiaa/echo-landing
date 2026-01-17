@@ -90,7 +90,8 @@ export function WaitlistCard() {
                                         onChange={(e) => setEmail(e.target.value)}
                                         placeholder="Enter your email"
                                         required
-                                        className="w-full pl-12 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-[oklch(0.65_0.18_220)] focus:border-transparent transition-all"
+                                        aria-label="Email address"
+                                        className="w-full pl-12 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-[oklch(0.65_0.18_220)] focus:border-transparent transition-all"
                                     />
                                 </div>
                                 <button
@@ -107,7 +108,7 @@ export function WaitlistCard() {
                                         "Join Waitlist"
                                     )}
                                 </button>
-                                <p className="text-xs text-zinc-500">
+                                <p className="text-xs text-zinc-400">
                                     By joining, you agree to receive email updates. Unsubscribe anytime.
                                 </p>
                             </form>

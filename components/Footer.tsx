@@ -40,18 +40,20 @@ export function Footer() {
                             </div>
                             <span className="font-semibold text-white text-lg tracking-tight">Echo</span>
                         </Link>
-                        <p className="text-sm text-zinc-500 mb-6 max-w-xs leading-relaxed">
+                        <p className="text-sm text-zinc-400 mb-6 max-w-xs leading-relaxed">
                             The personal finance OS that turns your money into an <span className="text-zinc-300">alive, actionable system</span>.
                         </p>
                         <div className="flex gap-3">
                             <a
                                 href="#"
+                                aria-label="Follow us on Twitter"
                                 className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-300"
                             >
                                 <Twitter className="w-4 h-4" />
                             </a>
                             <a
                                 href="#"
+                                aria-label="View our GitHub"
                                 className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-300"
                             >
                                 <Github className="w-4 h-4" />
@@ -113,12 +115,12 @@ export function Footer() {
 
                 {/* Bottom Bar */}
                 <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-sm text-zinc-500 text-center md:text-left">
+                    <p className="text-sm text-zinc-400 text-center md:text-left">
                         © {new Date().getFullYear()} Echo. All rights reserved.
                     </p>
                     <div className="flex gap-6">
-                        <Link href="#" className="text-xs text-zinc-500 hover:text-zinc-300 transition-colors">Privacy Policy</Link>
-                        <Link href="#" className="text-xs text-zinc-500 hover:text-zinc-300 transition-colors">Terms of Service</Link>
+                        <Link href="#" className="text-xs text-zinc-400 hover:text-zinc-300 transition-colors">Privacy Policy</Link>
+                        <Link href="#" className="text-xs text-zinc-400 hover:text-zinc-300 transition-colors">Terms of Service</Link>
                     </div>
                 </div>
             </div>

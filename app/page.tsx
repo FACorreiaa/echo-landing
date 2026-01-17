@@ -31,7 +31,7 @@ export default function Home() {
               We&apos;re building Echo with a sustainable model. Pricing details coming soon.
             </p>
             <div className="glass-card p-12">
-              <p className="text-zinc-500">
+              <p className="text-zinc-400">
                 Pricing plans will be announced at launch.
               </p>
             </div>
@@ -54,7 +54,7 @@ export default function Home() {
               {posts.slice(0, 2).map((post) => (
                 <Link key={post.slug} href={`/blog/${post.slug}`}>
                   <div className="glass-card p-8 hover:bg-white/5 transition-all group cursor-pointer">
-                    <p className="text-sm text-zinc-500 mb-2">{post.date}</p>
+                    <p className="text-sm text-zinc-400 mb-2">{post.date}</p>
                     <h3 className="text-2xl font-semibold text-white mb-3 group-hover:text-emerald-400 transition-colors">
                       {post.title}
                     </h3>

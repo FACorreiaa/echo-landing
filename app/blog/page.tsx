@@ -14,7 +14,7 @@ export default function BlogIndex() {
                         {posts.map((post) => (
                             <Link key={post.slug} href={`/blog/${post.slug}`}>
                                 <div className="bg-zinc-900/30 backdrop-blur-md p-8 rounded-2xl border border-white/5 hover:border-white/10 transition-all group cursor-pointer hover:bg-zinc-900/50">
-                                    <p className="text-sm text-zinc-500 mb-2">{post.date}</p>
+                                    <p className="text-sm text-zinc-400 mb-2">{post.date}</p>
                                     <h2 className="text-2xl font-semibold text-white mb-3 group-hover:text-emerald-400 transition-colors">
                                         {post.title}
                                     </h2>
