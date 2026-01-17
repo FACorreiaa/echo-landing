@@ -19,17 +19,20 @@ export function Navbar() {
                 <div className="flex h-16 items-center justify-between mt-4">
                     {/* Logo and Nav Links Container */}
                     <div className="flex items-center gap-1 glass rounded-full px-2 py-2">
-                        {/* Logo */}
+                        {/* Logo with Cyan Glow */}
                         <Link
                             href="/"
                             className="flex items-center gap-2 px-3 py-1.5 rounded-full hover:bg-white/10 transition-colors"
                         >
-                            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[oklch(0.65_0.18_220)] to-[oklch(0.55_0.2_170)] flex items-center justify-center">
-                                <span className="text-white font-bold text-sm">E</span>
+                            <div className="relative">
+                                {/* Cyan glow behind logo */}
+                                <div className="absolute inset-0 bg-[#2DA6FA] blur-[12px] opacity-30 rounded-full" />
+                                <img 
+                                    src="/echo-logo.png" 
+                                    alt="Echo OS" 
+                                    className="h-8 relative z-10"
+                                />
                             </div>
-                            <span className="font-semibold text-white hidden sm:block">
-                                Echo
-                            </span>
                         </Link>
 
                         {/* Desktop Navigation */}

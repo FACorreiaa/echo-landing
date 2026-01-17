@@ -1,0 +1,8 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" fill="#050505" />
+  
+  <!-- Pulse bars only for favicon -->
+  <rect x="8" y="10" width="16" height="3" rx="1.5" fill="#FFFFFF" />
+  <rect x="8" y="15" width="10" height="3" rx="1.5" fill="#2DA6FA" />
+  <rect x="8" y="20" width="14" height="3" rx="1.5" fill="#FFFFFF" />
+</svg>

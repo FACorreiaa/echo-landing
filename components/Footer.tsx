@@ -25,8 +25,8 @@ export function Footer() {
             {/* Gradient Top Border */}
             <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[oklch(0.65_0.18_220_/_0.3)] to-transparent" />
 
-            {/* Watermark */}
-            <div className="absolute -bottom-24 -right-12 text-[12rem] font-bold text-white/[0.02] pointer-events-none select-none tracking-tighter">
+            {/* Watermark - hidden on mobile */}
+            <div className="hidden md:block absolute -bottom-24 -right-12 text-[12rem] font-bold text-white/[0.02] pointer-events-none select-none tracking-tighter">
                 Echo
             </div>
 
@@ -35,10 +35,14 @@ export function Footer() {
                     {/* Brand */}
                     <div className="col-span-2">
                         <Link href="/" className="flex items-center gap-2 mb-4 group">
-                            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[oklch(0.65_0.18_220)] to-[oklch(0.55_0.2_170)] flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                                <span className="text-white font-bold text-sm">E</span>
+                            <div className="relative">
+                                <div className="absolute inset-0 bg-[#2DA6FA] blur-[10px] opacity-20 rounded-full group-hover:opacity-40 transition-opacity duration-300" />
+                                <img 
+                                    src="/echo-logo.png" 
+                                    alt="Echo OS" 
+                                    className="h-10 relative z-10 group-hover:scale-105 transition-transform duration-300"
+                                />
                             </div>
-                            <span className="font-semibold text-white text-lg tracking-tight">Echo</span>
                         </Link>
                         <p className="text-sm text-zinc-400 mb-6 max-w-xs leading-relaxed">
                             The personal finance OS that turns your money into an <span className="text-zinc-300">alive, actionable system</span>.

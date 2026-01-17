@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Echo Team" }],
   icons: {
-    icon: "/favicon-echo.png",
-    apple: "/echo-icon.png",
+    icon: "/echo-logo.png",
+    apple: "/echo-logo.png",
   },
   openGraph: {
     title: "Echo — Your Money, Alive",

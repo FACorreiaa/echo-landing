@@ -28,25 +28,24 @@ export function SplashHero() {
                 <div className="h-full w-full bg-gradient-to-br from-cyan-900/30 via-violet-900/30 to-emerald-900/30" />
             </div>
 
-            {/* Gradient Orbs */}
-            <div className="absolute top-1/4 -left-1/4 w-[600px] h-[600px] rounded-full bg-[oklch(0.5_0.2_220_/_0.12)] blur-[150px] z-0" />
-            <div className="absolute bottom-1/4 -right-1/4 w-[600px] h-[600px] rounded-full bg-[oklch(0.5_0.2_170_/_0.12)] blur-[150px] z-0" />
+            {/* Gradient Orbs - hidden on mobile to prevent overflow */}
+            <div className="absolute top-1/4 -left-1/4 w-[300px] md:w-[600px] h-[300px] md:h-[600px] rounded-full bg-[oklch(0.5_0.2_220_/_0.12)] blur-[100px] md:blur-[150px] z-0 pointer-events-none" />
+            <div className="absolute bottom-1/4 -right-1/4 w-[300px] md:w-[600px] h-[300px] md:h-[600px] rounded-full bg-[oklch(0.5_0.2_170_/_0.12)] blur-[100px] md:blur-[150px] z-0 pointer-events-none" />
 
             {/* Main Content - CSS animations instead of Framer Motion */}
             <div className="relative z-10 grid h-full place-items-center lg:grid-cols-2 gap-8 lg:gap-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto py-20">
                 {/* Left Side - Content */}
                 <div className="flex flex-col gap-4 text-center lg:text-left lg:justify-self-end animate-fade-in-up">
-                    {/* Echo Logo */}
+                    {/* Echo Logo with Cyan Glow */}
                     <div className="flex justify-center lg:justify-start mb-4 animate-scale-in delay-200">
-                        <div className="flex items-center gap-3">
-                            <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br from-[oklch(0.65_0.18_220)] to-[oklch(0.55_0.2_170)] flex items-center justify-center shadow-2xl shadow-cyan-500/20">
-                                <span className="text-white font-bold text-3xl md:text-4xl">
-                                    E
-                                </span>
-                            </div>
-                            <span className="font-bold text-white text-3xl md:text-4xl tracking-tight">
-                                Echo
-                            </span>
+                        <div className="relative">
+                            {/* Cyan glow - "Alive" energy */}
+                            <div className="absolute inset-0 bg-[#2DA6FA] blur-[20px] opacity-40 rounded-full scale-125" />
+                            <img 
+                                src="/echo-logo.png" 
+                                alt="Echo OS" 
+                                className="h-20 md:h-28 relative z-10"
+                            />
                         </div>
                     </div>
 
