@@ -10,7 +10,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Echo — Your Money, Alive",
   description:
-    "Echo is a personal finance OS that turns your transaction data into clear next actions, monthly insights, and a shareable Money Wrapped story.",
+    "Echo is a personal finance OS that turns your transaction data into actions, monthly insights, and a shareable Money Wrapped story.",
   keywords: [
     "personal finance",
     "budget tracker",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Echo — Your Money, Alive",
     description:
-      "The personal finance OS that proactively turns your transaction data into clear next actions and monthly insights.",
+      "The personal finance OS that proactively turns your transaction data into actions and monthly insights.",
     type: "website",
     locale: "en_US",
     siteName: "Echo",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Echo — Your Money, Alive",
     description:
-      "The personal finance OS that proactively turns your transaction data into clear next actions and monthly insights.",
+      "The personal finance OS that proactively turns your transaction data into actions and monthly insights.",
   },
 };
 

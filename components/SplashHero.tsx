@@ -69,7 +69,7 @@ export function SplashHero() {
                     <p className="text-gray-300 text-lg md:text-xl max-w-md mx-auto lg:mx-0 mt-4 animate-fade-in-up delay-500">
                         Echo is the personal finance OS that turns your transaction data
                         into{" "}
-                        <span className="text-white font-medium">clear next actions</span>,{" "}
+                        <span className="text-white font-medium">actions</span>,{" "}
                         <span className="text-white font-medium">monthly insights</span>,
                         and a shareable{" "}
                         <span className="text-white font-medium">Money Wrapped</span> story.

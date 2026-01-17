@@ -41,7 +41,7 @@ export function Hero() {
                 {/* Subheadline */}
                 <p className="text-lg sm:text-xl text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed">
                     Echo is the personal finance OS that turns your transaction data into{" "}
-                    <span className="text-white font-medium">clear next actions</span>,{" "}
+                    <span className="text-white font-medium">actions</span>,{" "}
                     <span className="text-white font-medium">monthly insights</span>, and a
                     shareable{" "}
                     <span className="text-white font-medium">Money Wrapped</span> story.
